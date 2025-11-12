@@ -4,7 +4,7 @@
 const API_BASE_URL =
   process.env.NODE_ENV === 'development'
     ? (process.env.REACT_APP_API_URL || '')  // Empty string uses proxy from package.json
-    : (process.env.REACT_APP_API_URL || 'https://likwapu-ecommerce-backend.fly.dev');
+    : (process.env.REACT_APP_API_URL || 'https://likwapuecommerce.fly.dev');
 
 export const API_ENDPOINTS = {
   // Auth (aligned to backend routes)
@@ -37,7 +37,7 @@ export const API_ENDPOINTS = {
   
   // Cart
   cart: '/api/cart',
-  addToCart: 'https://likwapu-ecommerce-backend.fly.dev/add',
+  addToCart: 'https://likwapuecommerce.fly.dev/add',
   updateCart: '/api/cart/update',
   removeFromCart: (itemId) => `/api/cart/remove/${itemId}`,
   
